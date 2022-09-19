@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    div
+    {
+        height: 350px;
+        width: 250px;
+        background-color: silver;
+        margin-left: 20px;
+        margin-right: 20px;
+        
+   
+    }
+    input
+    {
+ 
+        float: left;
+    }
+    #screen
+    {
+        height: 50px;
+        width: 245px;
+        
+    }
+#a
+{
+    height: 40px;
+    width: 55px;
+    padding: 10px;
+    margin: 5px;
+}
+
+</style>
+</head>
+<body>
+   <center>
+    <div>
+    <input type="text" id="screen" name="screen"><br><br>
+    
+    <input type="button" name="1" value="1" id="a" onclick="updatetxtbox('1')">
+    <input type="button" name="2" value="2" id="a" onclick="updatetxtbox('2')">
+    <input type="button" name="3" value="3" id="a" onclick="updatetxtbox('3')">
+    <input type="button" name="4" value="4" id="a" onclick="updatetxtbox('4')">
+    <input type="button" name="5" value="5" id="a" onclick="updatetxtbox('5')">
+    <input type="button" name="6" value="6" id="a" onclick="updatetxtbox('6')"><br><br>
+    <input type="button" name="7" value="7" id="a" onclick="updatetxtbox('7')">
+    <input type="button" name="8" value="8" id="a" onclick="updatetxtbox('8')">
+    <input type="button" name="9" value="9" id="a" onclick="updatetxtbox('9')"><br><br>
+    <input type="button" name="0" value="0" id="a" onclick="updatetxtbox('0')">
+    <input type="button" name="+" value="+" id="a" onclick="updatetxtbox('+')">
+    <input type="button" name="-" value="-" id="a" onclick="updatetxtbox('-')"><br><br>
+    <input type="button" name="/" value="/" id="a" onclick="updatetxtbox('/')">
+    <input type="button" name="*" value="*" id="a" onclick="updatetxtbox('*')">
+    <input type="button" name="=" value="=" id="a" onclick="result()">
+    <input type="button" name="reset" value="reset" id="a" onclick="reset()">
+</center>
+
+</div>
+<script>
+function updatetxtbox(value)
+{
+    document.getElementById("screen").value+=value;
+}
+
+function result()
+{
+    document.getElementById("screen").value=eval(document.getElementById("screen").value);
+}
+function reset()
+{
+    document.getElementById("screen").value="";
+}
+</script>
+</body>
+</html>
